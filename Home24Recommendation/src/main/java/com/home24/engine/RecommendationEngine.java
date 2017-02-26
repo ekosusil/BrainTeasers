@@ -14,15 +14,6 @@ import java.util.stream.Collectors;
 
 public class RecommendationEngine {
 	
-	public Map<String, Map<String, Map>> getDataSource() {
-		return dataSource;
-	}
-
-	public void setDataSource(Map<String, Map<String, Map>> dataSource) {
-		this.dataSource = dataSource;
-	}
-
-	private Map<String,Map<String,Map>> dataSource=null;
 
 	static BinaryOperator<Map<String, Map>> findIntersection = (first, second) -> findCommonElement(first, second);
 	static BiFunction<Map<String, Map>, BinaryOperator<Map<String, Map>>, Function<Map<String, Map>, Double>> parsing = (
